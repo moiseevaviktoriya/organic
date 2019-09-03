@@ -1,0 +1,105 @@
+.reviews {
+    margin: 3.65% 0;
+    
+    .review {
+        margin: 0 auto;
+        display: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        
+        @media only screen and (max-width: 559px) {
+            flex-direction: column;
+        }
+        
+        &.active_review {
+            display: flex;
+        }
+        
+        .review_image {
+            margin-right: 54px;
+            width: 158px;
+            height: 158px;
+            border-radius: 50%;
+            filter: saturate(0%);
+            
+            @media only screen and (max-width: 559px) {
+               margin-right: 0; 
+            }
+        }
+        
+        .review_content {
+            width: 60%;
+            position: relative;
+            display: flex;
+            align-self: flex-start;
+            flex-direction: column;
+            
+            @media only screen and (max-width: 559px) {
+                margin: 0 auto;
+            }
+            
+            .quotes {
+                position: absolute;
+                top: -10px;
+                left: -80px;
+                width: 62px;
+                height: 57px;
+                background: url('../img/quote.png') no-repeat center center;
+                
+                @media only screen and (max-width: 559px) {
+                    left: -70px;
+                }
+            }
+            
+            .review_text {
+                font-family: 'PTSerif';
+                font-size: 16px;
+                line-height: 1.5em;
+            }
+            
+            .review_author {
+                margin: 0;
+                padding-top: 10px;
+                font-family: 'PTSerifBold';
+                font-size: 18px;
+                align-self: flex-end;
+                border-top: 2px solid #dddddd;
+            }
+        }
+        
+    }
+    
+    .indicators {
+        margin-top: 12px;
+        display: flex;
+        justify-content: center;
+        
+        .review_indicator {
+            width: 45px;
+            height: 45px;
+            margin-right: 20px;
+            cursor:pointer;
+            
+            &.icon {
+            @each $name, $path in $review_indicators {
+                &-#{$name} {
+                    background: url('../img/' + $path + '.png') no-repeat center center;
+                    background-size: 50%;
+                    border-radius: 50%;
+                    background-color: #dddddd;
+                    
+                }
+            }
+        }
+            &.active_indicator {
+                filter: opacity(25%);
+            }
+            
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

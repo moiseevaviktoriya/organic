@@ -1,0 +1,133 @@
+footer {
+    margin-top: -35px;
+    background: url('../img/footer-image.png') no-repeat 50% 50%;
+    background-size: cover;
+    
+    .container {
+        padding-top: 8%;
+        padding-bottom: 8%;
+        position: relative;
+        
+        .footer_form {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+            input {
+                width: 47%;
+                height: 50px;
+                margin-bottom: 24px;
+                border: 1px solid #dddddd;
+                padding: 20px 0 20px 16px;
+                
+                @media (max-width: 576px) {
+                    width: 100%;
+                }
+            }
+            
+            textarea {
+                width: 100%;
+                border: 1px solid #dddddd;
+                margin-bottom: 48px;
+                padding: 20px 0 20px 16px;
+            }
+            
+            input::placeholder, textarea::placeholder {
+                font-family: 'PTSerif';
+                font-size: 18px;
+                color: #c3c3c3;
+            }
+            
+            .buy-button {
+                margin: 0 auto;
+                font-family: 'PTSerif';
+                background-color: #dddddd;
+                
+                &:hover, &:active {
+                    background-color: #f6f6f6;
+                }
+            
+            }
+    
+        }
+        
+        .animated-bird-container {
+           z-index: 2;
+	       position: absolute;
+	       top: 10%;
+	       left: 50%;
+	       transform: scale(0) translateX(-10vw);
+	       will-change: transform;
+	
+	       animation-name: fly-right-one;
+	       animation-timing-function: linear;
+	       animation-iteration-count: 1;
+		   animation-duration: 5s;
+		   animation-delay: 0;
+            
+            .animated-bird {
+                background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.svg);
+                background-size: auto 100%;
+                width: 88px;
+                height: 125px;
+                will-change: background-position;
+
+                animation-name: fly-cycle;
+                animation-timing-function: steps(10);
+                animation-iteration-count: 1;
+                animation-duration: 5s;
+            }
+        }
+    }
+}
+        
+        @keyframes fly-cycle {
+            100% {
+                background-position: -900px 0;
+            }
+        }
+
+        @keyframes fly-right-one {
+
+            0% {
+                transform: scale(0.3) translateX(0);
+            }
+
+            10% {
+                transform: translateY(0vh) translateX(5vw) scale(0.6);
+            }
+            
+            20% {
+                transform: translateY(0vh) translateX(10vw) scale(0.6);
+            }
+
+            30% {
+                transform: translateY(-8vh) translateX(15vw) scale(0.6);
+            }
+
+            40% {
+                transform: translateY(-12vh) translateX(20vw) scale(0.6);
+            }
+
+            50% {
+                transform: translateY(-14vh) translateX(25vw) scale(0.6);
+            }
+            60% {
+                transform: translateY(-18vh) translateX(30vw) scale(0.6);
+            }
+            70% {
+                transform: translateY(-20vh) translateX(35vw) scale(0.6);
+            }
+            80% {
+                transform: translateY(-22vh) translateX(40vw) scale(0.6);
+            }
+            90% {
+                transform: translateY(-26vh) translateX(45vw) scale(0.6);
+            }
+
+            100% {
+                transform: translateY(-30vh) translateX(50vw) scale(0.6);
+            }
+        }

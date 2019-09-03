@@ -1,0 +1,69 @@
+header {
+    background: url('../img/main-banner.png') no-repeat 50% 50%;
+    background-size: cover;
+    
+    .container {
+        padding-top: 10px;
+        
+        .logo {
+            font-family: 'ChristmasScriptC';
+            font-size: 32px;
+        }
+        
+        .send {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+            @media only screen and (max-width: 767px) {
+                justify-content: flex-start;
+            }
+            
+            .send-icon {
+                background: url('../img/pigeon.png');
+                width: 28px;
+                height: 28px;
+            }
+            
+            .send-text {
+                margin-left: 12px;
+                font-family: 'Lora';
+                font-size: 18px;
+                color: black;
+                
+                &:hover, &:active {
+                    color: #6a6c65;
+                }
+            }
+        }
+        
+        .header__content {
+            margin: 11% 0;
+            min-height: 300px;
+            background: url('../img/main-image.png') no-repeat 100% 50%;
+            background-size: contain;
+            
+            h2 {
+                font-family: 'LoraBold';
+                font-size: 46px;
+                width: 50%;
+                
+                @media only screen and (max-width: 767px) {
+                    width: 100%;
+                    font-size: 36px;
+                    background-color: rgba(255, 255, 255, .5)
+                }
+            }
+            
+            .white-button {
+                font-family: 'Lora';
+                font-size: 22px;
+                background-color: #f6f6f6;
+                
+                &:hover, &:active {
+                    background-color: #dddddd;
+                }
+            }
+        }
+    }
+}
