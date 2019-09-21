@@ -1,36 +1,60 @@
 body {
+    background: url('../img/layer.jpg') no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    
+    @media only screen and (min-width: 501px) and (max-width: 1100px) {
+        background-size: 150%;
+    }
+    
+    @media only screen and (max-width: 500px) {
+        background-size: 300%;
+    }
+}
+
+.section__title {
+    font-family: 'RalewayBlack';
+    font-size: 40px;
+    line-height: 50px;
     margin: 0;
+    margin-bottom: 8px;
+    color: #333;
+    text-transform: uppercase;
+    
+    &.white-title {
+        color: #fff;
+    }
+    
+    span {
+        font-family: 'RalewayThin';
+    }
 }
 
-.button {
-    display: block;
+.section__description {
+    font-family: 'OpenSansLight';
+    font-size: 18px;
+    line-height: 25px;
+    color: #b3b3b3;
+}
+
+.center__col {
+    display: flex;
+    justify-content: center;
+}
+
+.center__title {
+    margin: 0 auto;
     text-align: center;
-    width: 226px;
-    padding: 10px 0;
-    color: black;
-    font-size: 22px;
-    text-decoration: none;
-    border: 1px solid #d6d6d6;
-    cursor: pointer;
 }
 
-.section_title {
-    margin-bottom: 5.4%;
-    margin-top: 0;
+@mixin rounded__btn {
+    width: 154px;
+    height: 47px;
+    line-height: 47px;
     text-align: center;
-    font-family: 'PTSerifBold';
-    font-size: 36px;
+    color: #1b1b1b;
+    font-family: 'RalewayBold';
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 25px;
 }
-
-$icons: (
-  1: 'weapons',
-  2: 'target',
-  3: 'shield',
-  4: 'draw'
-);
-
-$review_indicators: (
-  'greek': 'greek',
-  'cross': 'cross',
-  'fashion': 'fashion'
-);

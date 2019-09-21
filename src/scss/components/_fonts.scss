@@ -1,35 +1,44 @@
 @font-face {
-    font-family: ChristmasScriptC; 
-    src: url("../fonts/christmasscriptc.woff2") format("woff2"),
-        url("../fonts/christmasscriptc.woff") format("woff");
+    font-family: OpenSansRegular; 
+    src: url("../webfonts/opensans-regular.woff2") format("woff2");
     font-weight: regular; 
 }
 
 @font-face {
-    font-family: Lora; 
-    src: url("../fonts/Lora.woff2") format("woff2"),
-        url("../fonts/Lora.woff") format("woff");
-    font-weight: regular; 
-}
-
-@font-face {
-    font-family: LoraBold; 
-    src: url("../fonts/Lorabold.woff2") format("woff2"),
-        url("../fonts/Lorabold.woff") format("woff");
+    font-family: Gilroy-ExtraBold; 
+    src: url("../webfonts/Gilroy-ExtraBold.woff") format("woff");
     font-weight: bold; 
 }
 
 @font-face {
-    font-family: PTSerif; 
-    src: url("../fonts/ptserif.woff2") format("woff2"),
-        url("../fonts/ptserif.woff") format("woff");
-    font-weight: regular; 
+    font-family: OpenSansLight; 
+    src: url("../webfonts/opensans-light.woff2") format("woff2");
+    font-weight: light; 
 }
 
 @font-face {
-    font-family: PTSerifBold; 
-    src: url("../fonts/ptserifbold.woff2") format("woff2"),
-        url("../fonts/ptserifbold.woff") format("woff");
+    font-family: RalewayBold; 
+    src: url("../webfonts/raleway-v14-latin-700.woff2") format("woff2");
     font-weight: bold; 
+}
+
+@font-face {
+    font-family: RalewayBlack; 
+    src: url("../webfonts/raleway-v14-latin-900.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: RalewayThin; 
+    src: url("../webfonts/raleway-v14-latin-100.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Storytella; 
+    src: url("../webfonts/Storytella.otf") format("woff");
+}
+
+@font-face {
+    font-family: Font Awesome 5 Brands; 
+    src: url("../webfonts/fa-brands-400.woff2") format("woff2");
 }
 

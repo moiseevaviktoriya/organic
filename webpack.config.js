@@ -94,8 +94,8 @@ const config = {
     }),
     new CopyWebpackPlugin([
       {
-        from: "./src/fonts",
-        to: "./fonts"
+        from: "./src/webfonts",
+        to: "./webfonts"
       },
       {
         from: "./src/img",

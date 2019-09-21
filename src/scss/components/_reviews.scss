@@ -1,104 +1,80 @@
 .reviews {
-    margin: 3.65% 0;
+    width: 100%;
+    padding-top: 7%;
+    background: url('../img/review-background.jpg') center center no-repeat;
+    background-size: cover;
     
-    .review {
-        margin: 0 auto;
-        display: none;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
+    .carousel-slider {
+        min-height: 400px!important;
+    }
+    
+    .carousel-item {
+        padding: 0 0 0 50px;
         
-        @media only screen and (max-width: 559px) {
-            flex-direction: column;
-        }
-        
-        &.active_review {
-            display: flex;
-        }
-        
-        .review_image {
-            margin-right: 54px;
-            width: 158px;
-            height: 158px;
-            border-radius: 50%;
-            filter: saturate(0%);
+        .review__text {
+            font-family: 'Times New Roman';
+            font-size: 25px!important;
+            line-height: 30px;
+            font-style: italic;
+            color: #fff;
             
-            @media only screen and (max-width: 559px) {
-               margin-right: 0; 
-            }
-        }
-        
-        .review_content {
-            width: 60%;
-            position: relative;
-            display: flex;
-            align-self: flex-start;
-            flex-direction: column;
-            
-            @media only screen and (max-width: 559px) {
-                margin: 0 auto;
-            }
-            
-            .quotes {
+            &:before {
+                content: '';
                 position: absolute;
-                top: -10px;
-                left: -80px;
-                width: 62px;
-                height: 57px;
-                background: url('../img/quote.png') no-repeat center center;
+                width: 42px;
+                height: 33px;
+                left: 0;
+                background: url('../img/review.png') no-repeat;
+                background-size: cover;
+            }
+            
+            @media only screen and (max-width: 600px) {
+                font-size: 16px!important;
+                line-height: 22px
+            }
+        }
+        
+        .review__author {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            
+            img {
+                width: 70px;
+                height: 70px;
+                display: block;
+                margin-right: 20px;
                 
-                @media only screen and (max-width: 559px) {
-                    left: -70px;
+            }
+            
+            .review__author-name {
+                font-family: 'RalewayBold';
+                font-size: 18px;
+                line-height: 23px;
+                color: #fff;
+                
+                span {
+                    font-family: 'RalewayThin';
                 }
             }
-            
-            .review_text {
-                font-family: 'PTSerif';
-                font-size: 16px;
-                line-height: 1.5em;
-            }
-            
-            .review_author {
-                margin: 0;
-                padding-top: 10px;
-                font-family: 'PTSerifBold';
-                font-size: 18px;
-                align-self: flex-end;
-                border-top: 2px solid #dddddd;
-            }
         }
-        
     }
     
     .indicators {
-        margin-top: 12px;
-        display: flex;
-        justify-content: center;
+        bottom: 10px;
+        right: 10px;
+        left: unset;
         
-        .review_indicator {
-            width: 45px;
-            height: 45px;
-            margin-right: 20px;
-            cursor:pointer;
+        .indicator-item {
+            width: 12px;
+            height: 12px;
+            background-color: transparent;
+            border: 2px solid #585858;
             
-            &.icon {
-            @each $name, $path in $review_indicators {
-                &-#{$name} {
-                    background: url('../img/' + $path + '.png') no-repeat center center;
-                    background-size: 50%;
-                    border-radius: 50%;
-                    background-color: #dddddd;
-                    
-                }
-            }
-        }
-            &.active_indicator {
-                filter: opacity(25%);
-            }
-            
-            &:last-child {
-                margin-right: 0;
+            &.active {
+                background-color: #fde557;
+                border: none;
             }
         }
     }

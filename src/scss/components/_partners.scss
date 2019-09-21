@@ -1,0 +1,42 @@
+$partners-icons: (
+    item-1: 'organic-emporium',
+    item-2: 'farm-fresh',
+    item-3: 'organic-food-comp',
+    item-4: 'farmer',
+    item-5: 'organic'
+);
+
+
+.partners {
+    padding-bottom: 7%;
+    
+    .partners__row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        a {
+            display: block;
+            height: 120px;
+            width: 20%;
+            
+            @media only screen and (max-width: 600px) {
+                width: 50%;
+            }
+            
+            @each $name, $icon in $partners-icons {
+                &.partners__#{$name} {
+                    background: url('../img/' + $icon + '.jpg') no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            
+            &:hover {
+                animation: swing 1s;
+            }
+        }
+        
+    }
+}
+

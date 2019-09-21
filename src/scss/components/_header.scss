@@ -1,69 +1,186 @@
 header {
-    background: url('../img/main-banner.png') no-repeat 50% 50%;
-    background-size: cover;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .6), transparent);
+    border-bottom: 1px solid rgba(255, 255, 255, .6);
+    height: 105px;
     
-    .container {
-        padding-top: 10px;
+    .header__col {
+        position: relative;
+        display: flex;
+        flex-direction:row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 105px;
         
-        .logo {
-            font-family: 'ChristmasScriptC';
-            font-size: 32px;
+        .header__menu-toggle {
+            display: none;
+            width: 100%;
+            height: 50px;
+            width: 50px;
+            position: relative;
+            
+            @media only screen and (max-width: 768px) {
+                display: block;
+            }
+            
+            span {
+                display: block;
+                position: absolute;
+                width: 50px;
+                top: 22px;
+                left: 0;
+                height: 5px;
+                background: #fcdb5a;
+                border-radius: 50px;
+                transform: rotate(0deg);
+                transition: all ease 0.5s;
+                
+                &:before,  &:after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 25px;
+                    height: 5px;
+                    background: #fcdb5a;
+                    border-radius: 50px;
+                    transition: all ease 0.5s;
+                }
+                
+                &:before {
+                    top: -10px;
+                    left: 0;
+                    transform-origin: left;
+                }
+                
+                &:after {
+                    bottom: -10px;
+                    right: 0;
+                    transform-origin: right;
+                }
+                
+                &.open {
+                    transform: rotate(135deg);
+                    
+                    &:before {
+                    top: 0px;
+                    transform: translateX(100%) rotate(-90deg);
+                }
+                
+                    &:after {
+                        bottom: 0;
+                        transform: translateX(-100%) rotate(-90deg);
+                    }
+                }
+            }
         }
         
-        .send {
+        .header__logo {
+            position: relative;
+            width: 100px;
+            align-self:flex-start;
+            margin-right: 30px;
+            
+            @media only screen and (max-width: 768px) {
+                margin-right: 0;
+            }
+            
+            .header__logo-img {
+                width: 100px;
+                height: 132px;
+                position: absolute;
+                background: url('../img/logo.png') no-repeat;
+                top: -50%;
+                left: 0;
+                
+            }
+        }
+        
+        .header__nav {
+            width: 70%;
             display: flex;
-            justify-content: flex-end;
-            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            margin: 0;
             
-            @media only screen and (max-width: 767px) {
-                justify-content: flex-start;
+            @media only screen and (max-width: 768px) {
+                display: none;
+                position: absolute;
+                top: 105px;
+                width: 150px;
+                left: 0;
+                background-color: rgba(0,0,0,.8);
             }
             
-            .send-icon {
-                background: url('../img/pigeon.png');
-                width: 28px;
-                height: 28px;
-            }
-            
-            .send-text {
-                margin-left: 12px;
-                font-family: 'Lora';
-                font-size: 18px;
-                color: black;
+            li {
+                margin-right: 30px;
+                height: 105px;
+                text-align: center;
                 
-                &:hover, &:active {
-                    color: #6a6c65;
+                @media only screen and (max-width: 768px) {
+                    height: 50px;
+                    margin-right: 0;
+                }
+                
+                &:last-child {
+                    margin-right: 0;
+                }
+                
+                a {
+                    line-height: 105px;
+                    height: 105px;
+                    display: block;
+                    font-family: 'OpenSansRegular';
+                    font-size: 14px;
+                    color: #fff;
+                    
+                    @media only screen and (max-width: 768px) {
+                        line-height: 50px;
+                        height: 50px;
+                    }
+                    
+                    &.active {
+                        border-bottom: 1px solid #fcdb5a;
+                        
+                        @media only screen and (max-width: 768px) {
+                            background-color: #fcdb5a;
+                        }
+                    }
+                    
                 }
             }
         }
         
-        .header__content {
-            margin: 11% 0;
-            min-height: 300px;
-            background: url('../img/main-image.png') no-repeat 100% 50%;
-            background-size: contain;
+        .header__button {
+            @include rounded__btn;
+            background-color: #fff;
             
-            h2 {
-                font-family: 'LoraBold';
-                font-size: 46px;
-                width: 50%;
-                
-                @media only screen and (max-width: 767px) {
-                    width: 100%;
-                    font-size: 36px;
-                    background-color: rgba(255, 255, 255, .5)
-                }
-            }
-            
-            .white-button {
-                font-family: 'Lora';
-                font-size: 22px;
-                background-color: #f6f6f6;
-                
-                &:hover, &:active {
-                    background-color: #dddddd;
-                }
+            @media only screen and (max-width: 600px) {
+                display: none;
             }
         }
+    }
+}
+
+.title__container {
+    margin: 10% 0;
+    
+    @media only screen and (max-width: 500px) {
+        margin: 5% 0;
+    }
+    
+    .main__title {
+        margin: 0;
+        font-family: 'Storytella';
+        font-size: 200px;
+        color: #fff;
+        
+        @media only screen and (max-width: 768px) {
+                font-size: 150px;
+            }
+        
+        @media only screen and (max-width: 500px) {
+                font-size: 100px;
+            }
     }
 }

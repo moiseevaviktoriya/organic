@@ -1,0 +1,56 @@
+.product__banner {
+    width: 100%;
+    background: url('../img/tasty-cake.png') no-repeat 130% 100%;
+    background-size: contain;
+    background-color: #f9f9f9;
+    
+    .container {
+        position: relative;
+        
+        .row {
+            margin-bottom: 0;
+        }
+        
+        .product__banner-title {
+            margin: 30% 0;
+            font-family: 'Storytella';
+            font-size: 230px;
+            line-height: 180px;
+            color: #ccaf8a;
+            text-shadow: 3px 4px 5px rgba(0,0,0,.5);
+            
+            @media only screen and (max-width: 992px) {
+                font-size: 180px;
+                line-height: 150px;
+            }
+            
+            @media only screen and (max-width: 600px) {
+                font-size: 100px;
+                line-height: 90px;
+            }
+        }
+        
+        .product__banner-label {
+            position: absolute;
+            top: 50px;
+            right: 100px;
+            width: 200px;
+            height: 200px;
+            background: url('../img/organic.png') no-repeat;
+            background-size: cover;
+            
+            @media only screen and (max-width: 992px) {
+                width: 170px;
+                height: 170px;
+                right: 0;
+            }
+            
+            @media only screen and (max-width: 600px) {
+                width: 100px;
+                height: 100px;
+                right: 0;
+            }
+        }
+    }
+    
+}

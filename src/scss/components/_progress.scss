@@ -1,0 +1,60 @@
+$progress-icons: (
+  cake: 'cake',
+  cupcake: 'cupcake',
+  muffin: 'muffin',
+  doughnut: 'doughnut'
+);
+
+.progress-block {
+    background-color: #fff;
+    padding: 7% 0;
+    
+    .progress__item {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        
+        .progress__item-icon {
+            width: 70px;
+            height: 77px;
+            margin-right: 7%;
+            
+            @each $name, $icon in $progress-icons {
+                &.#{$name}-icon {
+                    background: url('../img/icons/' + $icon + '.png') no-repeat top;
+                    background-size: contain;
+                }
+            }
+        }
+    
+        .progress__item-count {
+            font-family: 'Gilroy-ExtraBold';
+            font-size: 50px;
+            line-height: 50px;
+            color: #2e211d;
+            
+            @media only screen and (min-width: 993px) and (max-width: 1200px) {
+                font-size: 40px;
+            }
+            
+            @media only screen and (max-width: 500px) {
+                font-size: 30px;
+            }
+
+        }
+    
+        .progress__item-title {
+            font-family: 'RalewayBold';
+            font-size: 15px;
+            line-height: 30px;
+            color: #555555;
+            
+            @media only screen and (max-width: 500px) {
+                font-size: 12px;
+            }
+        }
+   
+    }
+}

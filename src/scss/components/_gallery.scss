@@ -1,0 +1,91 @@
+.gallery {
+    
+    .gallery__wrapper {
+        margin-bottom: 0;
+        
+        .gallery__item {
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            
+            &:hover .gallery__item-overlay {
+                transform: translateY(-100%);
+            }
+            
+            img {
+                height: 370px;
+                width: 100%;
+                display: block;
+                object-fit: cover;
+            }
+            
+            .gallery__item-overlay {
+                width: 100%;
+                height: 370px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: rgba(36, 22, 16,.8);
+                color: #fff;
+                text-align: center;
+                line-height: 370px;
+                font-family: 'RalewayBold';
+                font-size: 18px;
+                transition: transform .5s ease;
+                
+            }
+        }
+    }
+}
+
+.pswp__counter {
+    color: white;
+}
+
+.pswp__button {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background: url('../img/default-skin.png') no-repeat;
+    border: none;
+    cursor: pointer;
+    
+    &.pswp__button--close {
+        background-position: 0 -44px;
+        right: 0;
+    }
+    
+    &.pswp__button--fs {
+        background-position: 0 0;
+        right: 45px;
+    }
+    
+    &.pswp__button--zoom {
+        background-position: -88px 0;
+        right: 90px;
+    }
+    
+    &.pswp__button--arrow--left {
+        background-position: -132px -44px;
+        left: 0px;
+        top: 50%;
+    }
+    
+    &.pswp__button--arrow--right {
+        background-position: -88px -44px;
+        right: 0px;
+        top: 50%;
+    }
+}
+
+.pswp__caption--fake {
+    display: none;
+}
+
+.pswp__caption {
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    color: white;
+    text-align: center;
+}
